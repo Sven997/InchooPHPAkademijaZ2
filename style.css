@@ -1,13 +1,14 @@
-table, td, th {
-    border: 1px solid black;
-    text-align: center;
-}
 
 table {
     border-collapse: collapse;
 }
 
-th, td {
-    width: 2.5em;
-    height: 2.5em;
+table, td, th {
+    border: 1px solid;
+    text-align: center;
+}
+
+td, th {
+    width: 2em;
+    height: 2em;
 }
