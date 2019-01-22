@@ -21,7 +21,6 @@ if (!isset($_POST['potvrdi'])) { ?>
 
 
 
-
 </form>
 
  <?php
@@ -43,17 +42,26 @@ if (!isset($_POST['potvrdi'])) { ?>
         }
     }
 
+    sort($parni_brojevi_final);
+
     //var_dump($parni_brojevi);
    $sum = array_sum($array_brojeva) / count($array_brojeva);
 
-    foreach ($parni_brojevi as $br){
-        if($br > $sum){
-            echo '<br>', $br, '<br>';
-            break;
+   ?>
+
+
+    <table>
+
+    <?php
+
+    foreach ($parni_brojevi_final as $br){
+        if($br > $sum && !isset($pointer)){
+            $pointer = true;
+            echo '<tr><td><b>', $br, '</b></td></tr>';
+        } else {
+            echo  '<tr><td>', $br, '</td></tr>';
         }
     }
-
-
 
 
     ?>
